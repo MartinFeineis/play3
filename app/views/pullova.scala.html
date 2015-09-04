@@ -1,0 +1,53 @@
+@(message: String)
+<html>
+	<head>
+		<title> "Pullovas will love it" </title>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/stylePW.css")">
+		<script src="@routes.Assets.at("javascripts/scriptFile1.js")" type="text/javascript"></script>
+
+	</head>
+
+ <body>
+ 	 <div class="leftblock"> 
+ 	 	<h1> Website of Pullova the Brave </h1>
+ 	 	<h6> Pullova der Aufrichtige </h6>
+ 	 </div>
+ 	 
+ 	 <h2> Lordfather of the King, Ruler of the galaxies of Derandavi, Bearer of the Wool </h2>
+ 	 <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile"> <img src="@routes.Assets.at("images/Wolle.jpg")" alt="Wolle.jpg" height=272 width=408> </a>
+	
+ 	 <p class="leftblock">
+ 	 	Become a member of the awesome family of the Pullova, all you need is a pullover.
+ 	 	We don't care who you are and where are you from, every pullover is welcome; green pullover old pullovers, new pullovers, yellow pullovers. But all pullovers must respect each other eachs other opinion and be openminded. </p>
+ 	 <p class="whatever">After a long the struggle with the female forces of fashion. The Pullovers won the war </p>
+
+
+
+ 	<table>  
+ 	<tr>
+ 		<td> <div >FirstPullova: &nbsp;</div> </td>
+ 		<td> <input id="firstPulli" type="text" name="firstpullova"> </td>
+ 	</tr>	
+ 	<tr>
+ 		<td> <div >SurPullova: &nbsp; </div> </td>
+ 		<td> <input id="surPulli" type="text" name="surpullova"> </td>
+ 	</tr>
+ 	</table>	
+ 	<input type="submit" value="Beam it up" onClick="sendThePullova()">
+
+ 	<input type="submit" value="Show me all Pullies" onClick="parseJSONpullies()">
+ 	<!-- <marquee scrollamount="90">  test </marquee>
+ 	<script type="text/javascript">
+    
+    	var myData = JSON.parse("http://mysafeinfo.com/api/data?list=englishmonarchs&format=json");
+
+    	$.ajax({
+			  dataType: "json",
+			  url: "http://mysafeinfo.com/api/data?list=englishmonarchs&format=json",
+			  data: data,
+			  success: success
+			}); 
+    </script> -->
+ </body>
+</html>
