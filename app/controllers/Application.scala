@@ -2,6 +2,7 @@ package controllers
 
 import play.api._
 import play.api.mvc._
+import sun.reflect.generics.reflectiveObjects.NotImplementedException
 
 object Application extends Controller {
 
@@ -10,5 +11,8 @@ object Application extends Controller {
   }
   def pullova = Action{
     Ok(views.html.pullova("Pullovas World"))
+  }
+  def sendThePullova = Action{
+    Ok("Not Implemented")
   }
 }
