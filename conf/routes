@@ -3,11 +3,14 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
-GET     /pullova                    controllers.Application.pullova
-POST    /sendThePullova             controllers.Application.sendThePullova
+GET        /                      controllers.Application.index
+GET        /pullova               controllers.Application.pullova
+GET        /showThePullova        controllers.Application.showThePullova
+
+# Mongo Test
+GET         /mongo                controllers.Application.mongotest
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET        /assets/*file          controllers.Assets.at(path="/public", file)
 
     
