@@ -9,6 +9,7 @@ GET        /showThePullova        controllers.Application.showThePullova
 
 # Mongo Test
 GET        /mongo                controllers.Application.mongo
+# GET        /push/:name           controllers.Application.push(name)
 
 # Map static resources from the /public folder to the /assets URL path
 GET        /assets/*file          controllers.Assets.at(path="/public", file)

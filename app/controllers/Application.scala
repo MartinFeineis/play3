@@ -24,29 +24,28 @@ object Application extends Controller {
   }
   def showThePullova = Action(Ok(Json.obj("pulli" -> Json.arr(Json.obj("name" -> "Wolle", "surname" -> "Pullova", "level" -> "Jedi"), Json.obj("name" -> "Batman", "surname" -> "Wayne", "level" -> "Justice League")))))
 
+//  def push(name: String) = Action(Ok )
+
   def mongo = Action{
     // see http://reactivemongo.org
       println("Hello Mongo")
       var dbpullis = new MongoDriver()
-      var connection: MongoConnection = dbpullis.connection(List("52.11.250.38"))
+      var connection: MongoConnection = dbpullis.connection(List("52.32.119.129"))
       var db = connection("pullofans")
       var collection = db.collection[BSONCollection]("firstfans")
 
     def listDocs(collection: BSONCollection) = {
       val query = BSONDocument()
-      // select only the fields 'lastName' and '_id'
       val filter = BSONDocument()
 
-      /* Let's run this query then enumerate the response and print a readable
-       * representation of each document in the response */
       collection.
         find(query, filter).
         cursor[BSONDocument].
         enumerate().apply(Iteratee.foreach { doc =>
-       // println(s"found document: ${BSONDocument pretty doc}")
+
       })
 
-      // Or, the same with getting a list
+
       val futureList: Future[List[BSONDocument]] =
         collection.
           find(query, filter).
@@ -55,7 +54,7 @@ object Application extends Controller {
 
       futureList.map { list =>
         list.foreach { doc =>
-         // println(s"found document: ${BSONDocument pretty doc}")
+          println(s"found document: ${BSONDocument pretty doc}")
         }
       }
     }
